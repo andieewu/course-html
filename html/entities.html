@@ -7,9 +7,10 @@
             margin: 5%;
             font-family: 'Inter', sans-serif;
         }
+    
 
-        h3 {
-            margin: 0;
+        h1 {
+            margin: 0.5rem;
         }
 
         .header {
@@ -22,23 +23,28 @@
         }
 
         .container {
+            display: grid;
             background-color: #ffffff;
-            display: flex;
-            /* border: 1px solid #3011ff; */
-            height: 50%;
-            /* font-size: 70pt; */
+            height: auto;
             padding: 1%;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
     </style>
     <body>
         <div class="header">
-            <span>hello-world.html</span>
+            <span>entities.html</span>
         </div>
 
         <div class="container">
-            Hello World!
+             <!-- Jangan gunakan karakter seperti <, /, > atau HTML akan membacanya sebagai tag -->
+
+             <!-- Contoh kasus -->
+             <h1> Belajar <HTML></h1>
+        
+            <!-- Memakai Entities dari HTML -->
+            <h1> Belajar &lt;HTML&gt;</h1>
         </div>
     </body>
 </html>
