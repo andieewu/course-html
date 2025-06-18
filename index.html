@@ -1,87 +1,96 @@
-<html>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        body{
-            font-family: 'Roboto', sans-serif;
-            margin: 5% 10% 0 10%;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/img/html.ico">
+  <title>HTML Course</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        .judul{
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-        h1{
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+    .login-box {
+      background: white;
+      padding: 25px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-        .tombol{
-            display: flex;
-            gap: 10px;
-        }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        hr{
-            margin: 0.5rem 0 0.5rem 0;
-            border: 1px solid;
-            border-color: #000000;
-        }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-        .button{
-            width: auto;
-            cursor: pointer;
-        }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
 
-        .button:hover{
-            color: rgb(0, 34, 255);
-        }
+    button:hover {
+      background-color: #0056b3;
+    }
 
-        ul{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
+    @media (max-width: 500px) {
+      .login-box {
+        margin: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
 
-        li{
-            margin-bottom: 0.5rem;
-        }
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required autocomplete="off">
+    <input type="password" id="password" placeholder="Password" required autocomplete="off">
+    <button onclick="login()">Login</button>
+  </div>
 
-        a{
-            text-decoration: none;
-            color: #000000;
-        }
+  <script>
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
 
-        a:hover{
-            color: rgb(0, 34, 255);
-        }
-    </style>
-    <body>
-        <div class="judul">
-            <h1>Contents</h1>
-            <div class="tombol">
-                <a href="" class="button">&lt;&lt; Back</a>
-            </div>
-        </div>
+      const validUsername = "html";
+      const validPassword = "html";
 
-        <hr>
+      if (username === validUsername && password === validPassword) {
+        alert("Login berhasil!");
+        window.location.href = "main.html";
+      } else {
+        alert("Username atau password salah!");
+      }
+    }
+  </script>
 
-        <div class="container">
-            <ul>
-                <li><a href="html/hello-world.html">hello-world.html</a></li>
-                <li><a href="html/heading.html">heading.html</a></li>
-                <li><a href="html/paragraph.html">paragraph.html</a></li>
-                <li><a href="html/entities.html">entities.html</a></li>
-                <li><a href="html/break-line.html">break-line.html</a></li>
-                <li><a href="html/style.html">style.html</a></li>
-                <li><a href="html/formatting.html">formatting.html</a></li>
-                <li><a href="html/comment.html">comment.html</a></li>
-                <li><a href="html/color.html">color.html</a></li>
-                <li><a href="html/list.html">list.html</a></li>
-                <li><a href="html/link.html">link.html</a></li>
-            </ul>
-            <hr>         
-        </div>
-    </body>
+</body>
 </html>
