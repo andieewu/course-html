@@ -59,6 +59,13 @@
       background-color: #0056b3;
     }
 
+    .credentials-hint {
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
     @media (max-width: 500px) {
       .login-box {
         margin: 0 20px;
@@ -67,12 +74,23 @@
   </style>
 </head>
 <body>
-
   <div class="login-box">
     <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" required autocomplete="off">
-    <input type="password" id="password" placeholder="Password" required autocomplete="off">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Username" required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" required autocomplete="off">
+    </div>
     <button onclick="login()">Login</button>
+
+    <!-- Pindahkan ke sini -->
+    <div class="credentials-hint">
+      <strong>Username:</strong> html <br />
+      <strong>Password:</strong> html
+    </div>
   </div>
 
   <script>
@@ -91,6 +109,6 @@
       }
     }
   </script>
-
 </body>
+
 </html>
