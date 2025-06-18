@@ -1,65 +1,71 @@
 <html>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #bfbfbf;
-            font-family: 'VT323', monospace;
-            font-size: 20pt;
-            margin: 5%;
-            color: #3011ff;
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: 5% 10% 0 10%;
         }
 
-        h3 {
+        .judul{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+        }
+
+        h1{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .tombol{
+            display: flex;
+            gap: 10px;
+        }
+
+        hr{
+            margin: 0.5rem 0 0.5rem 0;
+            border: 1px solid;
+            border-color: #000000;
+        }
+
+        .button{
+            width: auto;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            color: rgb(0, 34, 255);
+        }
+
+        ul{
             margin: 0;
+            padding: 0;
+            list-style-type: none;
         }
 
-        .header {
-            background-color: #3011ff;
-            padding: 0.1rem 0.5rem 0.1rem 0.5rem;
-            color: #ffffff;
+        li{
             margin-bottom: 0.5rem;
         }
 
-        .container {
-            border: 1px solid #3011ff;
-            font-size: 14pt;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        li {
-            margin: 0;
-        }
-
-        a {
-            display: block;
+        a{
             text-decoration: none;
-            padding: 0.5rem;
-            border-bottom: 1px solid #3011ff;
-            color: #3011ff;
+            color: #000000;
         }
 
-        a:hover {
-            background-color: #3011ff;
-            color: #ffffff;
-        }
-
-        li:first-child a {
-            border-top: none;
-        }
-
-        li:last-child a {
-            border-bottom: none;
+        a:hover{
+            color: rgb(0, 34, 255);
         }
     </style>
     <body>
-        <div class="header">
-            <h3>Contents</h3>
+        <div class="judul">
+            <h1>Contents</h1>
+            <div class="tombol">
+                <a href="" class="button">&lt;&lt; Back</a>
+            </div>
         </div>
+
+        <hr>
 
         <div class="container">
             <ul>
@@ -75,6 +81,7 @@
                 <li><a href="html/list.html">list.html</a></li>
                 <li><a href="html/link.html">link.html</a></li>
             </ul>
+            <hr>         
         </div>
     </body>
 </html>
